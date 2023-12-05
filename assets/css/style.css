@@ -56,6 +56,10 @@ li {
     flex-direction: column;
 }
 
+.wrap {
+    flex-wrap: wrap;
+}
+
 .container {
     padding-inline: 20px;
 }
@@ -83,6 +87,11 @@ aside figure {
 
 aside a {
     font-size: .8rem;
+    filter: opacity(.6);
+}
+
+aside a:hover {
+    filter: opacity(1);
 }
 
 aside .menu {
@@ -124,6 +133,12 @@ aside .playlist .crea-playlist {
     margin-block: 10px;
     align-items: center;
     gap: 10px;
+    filter: opacity(.6);
+    cursor: pointer;
+}
+
+aside .playlist .crea-playlist:hover {
+    filter: opacity(1);
 }
 
 aside .playlist .crea-playlist span:first-child {
@@ -167,6 +182,7 @@ aside .install-app .account li a {
     font-size: .8rem;
     gap: 10px;
     align-items: center;
+    filter: opacity(1);
 }
 
 aside .install-app .account li svg {
@@ -196,6 +212,17 @@ header {
     padding-right: 10px;
 }
 
+header button {
+    background-color: var(--colorHeader);
+    border: 1px solid white;
+    border-radius: 25px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: .7rem;
+    padding: 10px 30px;
+}
+
 /* !SECTION HEADER END */
 
 
@@ -205,6 +232,19 @@ main {
     background-color: var(--colorBG);
     height: calc(100vh - var(--heightHeader) - var(--heightFooter));
     overflow: scroll;
+    padding-top: 30px;
+}
+
+main .menu ul {
+    gap: 20px;
+    justify-content: center;
+}
+
+main .menu ul li a {
+    text-transform: uppercase;
+    font-size: .7rem;
+    font-weight: 600;
+    filter: opacity(.5);
 }
 
 /* !SECTION MAIN END */
