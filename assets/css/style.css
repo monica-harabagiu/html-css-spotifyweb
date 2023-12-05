@@ -1,5 +1,98 @@
+/*************************************************
+    GENERAL STYLES
+*************************************************/
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+html {
+    font-family: 'Montserrat', sans-serif;
+    border: 1px solid pink;
+}
+
+body {
+    height: 100vh;
+}
+
+:root {
+    --colorBG: #141922;
+    --colorHeader: #090B12;
+    --colorFooter: #282828;
+    --colorSidebar: #000000;
+    --colorAccent: #BAFF36;
+    --widthSidebarOpen: 250px;
+    --heightHeader: 70px;
+    --heightFooter: 70px;
+}
+
+
+/************************************************
+    UTILITIES
+************************************************/
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+/************************************************
+    SITE SECTIONS
+************************************************/
+
+
+/* SECTION SIDEBAR START *************************************/
+
+aside {
+    background-color: var(--colorSidebar);
+    height: calc(100vh - var(--heightFooter));
+    width: var(--widthSidebarOpen);
+}
+
+/* !SECTION SIDEBAR END */
+
+#header-main {
+    width: calc(100vw - var(--widthSidebarOpen));
+}
+
+
+/* SECTION HEADER START *************************************/
+
+header {
+    background-color: var(--colorHeader);
+    width: 100%;
+    height: var(--heightHeader);
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+/* !SECTION HEADER END */
+
+
+/* SECTION MAIN START *************************************/
+
+main {
+    background-color: var(--colorBG);
+    height: calc(100vh - var(--heightHeader) - var(--heightFooter));
+    overflow: scroll;
+}
+
+/* !SECTION MAIN END */
+
+
+/* SECTION FOOTER START *************************************/
+
+footer {
+    background-color: var(--colorFooter);
+    height: var(--heightFooter);
+}
+
+/* !SECTION FOOTER END */
