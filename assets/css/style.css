@@ -23,7 +23,7 @@ body {
     --colorFooter: #282828;
     --colorSidebar: #000000;
     --colorAccent: #BAFF36;
-    --widthSidebarOpen: 250px;
+    --widthSidebarOpen: 220px;
     --heightHeader: 70px;
     --heightFooter: 70px;
 }
@@ -149,6 +149,7 @@ aside .playlist h3 {
 
 aside .playlist ul {
     overflow: scroll;
+    font-size: .5rem;
 }
 
 aside .playlist .crea-playlist {
@@ -157,6 +158,7 @@ aside .playlist .crea-playlist {
     gap: 10px;
     filter: opacity(.6);
     cursor: pointer;
+    font-size: .5rem;
 }
 
 aside .playlist .crea-playlist:hover {
@@ -301,7 +303,50 @@ main #recently-played {
 footer {
     background-color: var(--colorFooter);
     height: var(--heightFooter);
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
 }
+
+footer .col-left {
+    gap: 50px;
+    align-items: center;
+}
+
+footer .col-left .song-playing {
+    gap: 10px;
+    align-items: center;
+}
+
+footer .col-left .song-name span:first-child {
+    font-size: .7rem;
+    font-weight: 700;
+}
+
+footer .col-left .song-name span:last-child {
+    font-size: .6rem;
+    font-weight: 500;
+    filter: opacity(.5);
+}
+
+footer .col-left .song-playing figure {
+    width: 40px;
+}
+
+footer .col-left .save-song {
+    gap: 15px;
+}
+
+footer .col-left .save-song i {
+    font-size: 15px;
+    filter: opacity(.5);
+}
+
+footer .col-mid .controllers {
+    gap: 20px;
+}
+
+
 
 /* !SECTION FOOTER END */
 
