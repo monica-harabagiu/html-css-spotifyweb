@@ -10,7 +10,7 @@
 
 html {
     font-family: 'Montserrat', sans-serif;
-    border: 1px solid pink;
+    color: white;
 }
 
 body {
@@ -28,6 +28,20 @@ body {
     --heightFooter: 70px;
 }
 
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style-type: none;
+}
+
 
 /************************************************
     UTILITIES
@@ -42,6 +56,10 @@ body {
     flex-direction: column;
 }
 
+.container {
+    padding-inline: 20px;
+}
+
 
 /************************************************
     SITE SECTIONS
@@ -54,9 +72,83 @@ aside {
     background-color: var(--colorSidebar);
     height: calc(100vh - var(--heightFooter));
     width: var(--widthSidebarOpen);
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
+aside figure {
+    width: 160px;
+}
+
+aside a {
+    font-size: .8rem;
+}
+
+aside .menu {
+    margin-top: 30px;
+}
+
+aside .menu ul {
+    gap: 10px;
+}
+
+aside .menu li {
+    padding-left: 20px;
+}
+
+aside .menu li:hover {
+    border-left: 2px solid;
+    border-color: var(--colorAccent);
+    padding-left: calc(20px - 2px);
+}
+
+aside .menu li a {
+    gap: 5px;
+}
+
+aside .menu li svg {
+    width: 20px;
+}
+
+aside .playlist {
+    margin-top: 25px;
+}
+
+aside .playlist h3 {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+aside .playlist .crea-playlist {
+    margin-block: 10px;
+    align-items: center;
+    gap: 10px;
+}
+
+aside .playlist .crea-playlist span:first-child {
+    background-color: white;
+    color: var(--colorSidebar);
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1;
+}
+
+aside .playlist .crea-playlist span:last-child {
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+aside .playlist ul {
+    gap: 10px;
+}
+
+
 /* !SECTION SIDEBAR END */
+
 
 #header-main {
     width: calc(100vw - var(--widthSidebarOpen));
