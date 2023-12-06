@@ -86,12 +86,16 @@ h6 {
     SITE SECTIONS
 ************************************************/
 
+.web-app-top {
+    height: calc(100vh - var(--heightFooter));
+}
+
 
 /* SECTION SIDEBAR START *************************************/
 
 aside {
     background-color: var(--colorSidebar);
-    height: calc(100vh - var(--heightFooter));
+    height: 100%;
     width: var(--widthSidebarOpen);
     padding-top: 20px;
     padding-bottom: 10px;
@@ -139,7 +143,7 @@ aside .menu li svg {
 }
 
 aside .playlist {
-    margin-top: 25px;
+    margin-block: 25px;
 }
 
 aside .playlist h3 {
@@ -150,6 +154,7 @@ aside .playlist h3 {
 aside .playlist ul {
     overflow: scroll;
     font-size: .5rem;
+    gap: 10px;
 }
 
 aside .playlist .crea-playlist {
@@ -180,10 +185,6 @@ aside .playlist .crea-playlist span:first-child {
 aside .playlist .crea-playlist span:last-child {
     font-size: .9rem;
     font-weight: 600;
-}
-
-aside .playlist ul {
-    gap: 10px;
 }
 
 aside .install-app .download li a {
@@ -221,7 +222,9 @@ aside .install-app .account li svg {
 
 
 #header-main {
-    width: calc(100vw - var(--widthSidebarOpen));
+    height: 100%;
+    width: calc(100% - var(--widthSidebarOpen));
+    overflow: scroll;
 }
 
 
@@ -229,11 +232,16 @@ aside .install-app .account li svg {
 
 header {
     background-color: var(--colorHeader);
-    width: 100%;
+    filter: opacity(.8);
     height: var(--heightHeader);
     justify-content: flex-end;
     align-items: center;
     padding-right: 10px;
+    position: fixed;
+    top: 0;
+    left: var(--widthSidebarOpen);
+    right: 0;
+    z-index: 1;
 }
 
 header button {
@@ -254,9 +262,8 @@ header button {
 
 main {
     background-color: var(--colorBG);
-    height: calc(100vh - var(--heightHeader) - var(--heightFooter));
-    overflow: scroll;
-    padding-top: 30px;
+    padding-top: 100px;
+    height: 100vh;
 }
 
 main .menu ul {
@@ -304,13 +311,17 @@ footer {
     background-color: var(--colorFooter);
     height: var(--heightFooter);
     padding: 10px;
-    justify-content: space-between;
     align-items: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 footer .col-left {
     gap: 50px;
     align-items: center;
+    flex-basis: 25%;
 }
 
 footer .col-left .song-playing {
@@ -342,8 +353,63 @@ footer .col-left .save-song i {
     filter: opacity(.5);
 }
 
+footer .col-mid {
+    flex-basis: 50%;
+    align-items: center;
+    gap: 15px;
+}
+
 footer .col-mid .controllers {
     gap: 20px;
+}
+
+footer .col-mid .song-bar {
+    gap: 20px;
+    align-items: center;
+}
+
+footer .col-mid .song-bar span {
+    font-size: .5rem;
+    font-weight: 600;
+}
+
+footer .col-mid .song-bar .all-bar {
+    height: 3px;
+    width: 300px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+footer .col-mid .song-bar .progress {
+    height: 3px;
+    width: 60px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+footer .col-right {
+    flex-basis: 25%;
+    gap: 20px;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+footer .col-right i {
+    font-size: 10px;
+}
+
+footer .col-right .all-bar {
+    height: 3px;
+    width: 90px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+}
+
+footer .col-right .progress {
+    height: 3px;
+    width: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
 }
 
 
