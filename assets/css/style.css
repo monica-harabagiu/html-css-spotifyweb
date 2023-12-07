@@ -95,12 +95,13 @@ h6 {
 
 aside {
     background-color: var(--colorSidebar);
-    height: 100%;
     width: var(--widthSidebarOpen);
     padding-top: 20px;
-    padding-bottom: 10px;
-    justify-content: space-between;
     overflow: hidden;
+}
+
+aside .aside-top {
+    height: 100%;
 }
 
 aside figure {
@@ -144,6 +145,7 @@ aside .menu li svg {
 
 aside .playlist {
     margin-block: 25px;
+    height: 50%
 }
 
 aside .playlist h3 {
@@ -151,10 +153,11 @@ aside .playlist h3 {
     font-size: .9rem;
 }
 
-aside .playlist ul {
+aside .playlist .playlist-name {
     overflow: scroll;
     font-size: .5rem;
     gap: 10px;
+    height: 80%;
 }
 
 aside .playlist .crea-playlist {
@@ -185,6 +188,10 @@ aside .playlist .crea-playlist span:first-child {
 aside .playlist .crea-playlist span:last-child {
     font-size: .9rem;
     font-weight: 600;
+}
+
+aside .install-app {
+    height: 80px;
 }
 
 aside .install-app .download li a {
@@ -225,6 +232,7 @@ aside .install-app .account li svg {
     height: 100%;
     width: calc(100% - var(--widthSidebarOpen));
     overflow: scroll;
+    background-color: var(--colorBG);
 }
 
 
@@ -261,9 +269,7 @@ header button {
 /* SECTION MAIN START *************************************/
 
 main {
-    background-color: var(--colorBG);
     padding-top: 100px;
-    height: 100vh;
 }
 
 main .menu ul {
