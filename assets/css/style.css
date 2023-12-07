@@ -24,6 +24,7 @@ body {
     --colorSidebar: #000000;
     --colorAccent: #BAFF36;
     --widthSidebarOpen: 220px;
+    --widthSidebarClosed: 60px;
     --heightHeader: 70px;
     --heightFooter: 70px;
 }
@@ -79,6 +80,10 @@ h6 {
 
 .container {
     padding-inline: 20px;
+}
+
+.xs-only {
+    display: none;
 }
 
 
@@ -152,8 +157,6 @@ aside .menu li a {
 aside .menu li svg {
     width: 20px;
 }
-
-
 
 aside .playlist {
     margin-block: 25px;
@@ -485,4 +488,66 @@ footer .col-right .progress {
         flex-direction: column;
         gap: 5px;
     }
+
+}
+
+
+/* Mobile XS 425px */
+
+@media screen and (max-width: 425px) {
+
+    .hidden-xs {
+        display: none;
+    }
+
+    .xs-only {
+        display: inline-block;
+    }
+
+    aside {
+        width: var(--widthSidebarClosed);
+    }
+
+    aside .menu {
+        margin-top: 0;
+    }
+
+    aside .menu figure {
+        width: 25px;
+    }
+
+    aside .menu ul {
+        align-items: center;
+    }
+
+    aside .menu li {
+        padding-left: 0;
+    }
+
+    aside .menu li:hover {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    aside .menu li:has(> a.home) {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    aside .install-app {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #header-main {
+        width: calc(100% - var(--widthSidebarClosed));
+    }
+
+    header {
+        left: var(--widthSidebarClosed);
+    }
+
+
 }
