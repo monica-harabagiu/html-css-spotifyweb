@@ -144,12 +144,6 @@ aside .menu li {
     padding-left: 20px;
 }
 
-aside .menu li:hover {
-    border-left: 2px solid;
-    border-color: var(--colorAccent);
-    padding-left: calc(20px - 2px);
-}
-
 aside .menu li a {
     gap: 5px;
 }
@@ -298,6 +292,22 @@ main .menu ul li a {
     font-size: .7rem;
     font-weight: 600;
     filter: opacity(.5);
+}
+
+main .menu ul li a:hover {
+    filter: opacity(1);
+}
+
+main .menu .active {
+    height: 2px;
+    width: 30px;
+    background-color: var(--colorAccent);
+}
+
+main .menu li:has(div.active) {
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
 }
 
 main #recently-played,
@@ -521,11 +531,6 @@ footer .col-right .progress {
     }
 
     aside .menu li {
-        padding-left: 0;
-    }
-
-    aside .menu li:hover {
-        border-left: 0;
         padding-left: 0;
     }
 
