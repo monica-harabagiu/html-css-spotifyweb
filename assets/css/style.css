@@ -282,6 +282,7 @@ header button {
 
 main {
     padding-top: 100px;
+    padding-bottom: 50px;
 }
 
 main .menu ul {
@@ -296,29 +297,45 @@ main .menu ul li a {
     filter: opacity(.5);
 }
 
-main #recently-played {
+main #recently-played,
+main #created-for,
+main #populars {
     margin-top: 30px;
     padding-right: 30px;
 }
 
-#recently-played .cards {
+main .title-description {
+    font-size: .6rem;
+    filter: opacity(.5);
+}
+
+main .cards {
     gap: 15px;
     margin-top: 20px;
 }
 
-#recently-played .card {
+main .card {
     width: calc((100% / 6) - 15px + 15px / 6);
     text-align: center;
 }
 
-#recently-played .card img {
+main .card img {
     max-width: 200px;
 }
 
-#recently-played .card h4 {
+main .card h4 {
     margin-top: 15px;
     margin-bottom: 7px;
 }
+
+main #populars img {
+    border-radius: 50%;
+}
+
+
+/* Creato per John Doe */
+
+
 
 /* !SECTION MAIN END */
 
@@ -393,7 +410,7 @@ footer .col-mid .song-bar span {
 
 footer .col-mid .song-bar .all-bar {
     height: 3px;
-    width: 20vw;
+    width: 30vw;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
 }
@@ -445,11 +462,12 @@ footer .col-right .progress {
 
 @media screen and (max-width: 768px) {
 
-    main #recently-played {
+    main #recently-played,
+    main #created-for {
         padding-right: 10px;
     }
 
-    #recently-played .card {
+    main .card {
         width: calc((100% / 4) - 15px + 15px / 4);
     }
 }
@@ -459,7 +477,7 @@ footer .col-right .progress {
 
 @media screen and (max-width: 576px) {
 
-    #recently-played .card {
+    main .card {
         width: calc((100% / 2) - 15px + 15px / 2);
     }
 
