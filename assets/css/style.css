@@ -270,6 +270,12 @@ header button {
     font-weight: 600;
     font-size: .7rem;
     padding: 10px 30px;
+    transform: scale(1);
+}
+
+header button:hover {
+    transform: scale(1.1);
+    cursor: pointer;
 }
 
 /* !SECTION HEADER END */
@@ -348,7 +354,7 @@ main .card figure {
 main .card figure:hover::after {
     content: '\f144';
     font-family: 'Font Awesome 6 Free';
-    font-size: 4rem;
+    font-size: 3rem;
     position: absolute;
     left: 50%;
     top: 50%;
