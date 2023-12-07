@@ -517,11 +517,11 @@ footer .col-right i {
 }
 
 footer .col-right .all-bar {
-    width: 80px;
+    width: 5vw;
 }
 
 footer .col-right .progress {
-    width: 20px;
+    width: 2vw;
 }
 
 
@@ -547,6 +547,10 @@ footer .col-right .progress {
     main .card {
         width: calc((100% / 4) - 15px + 15px / 4);
     }
+
+    footer {
+        gap: 20px;
+    }
 }
 
 
@@ -556,6 +560,10 @@ footer .col-right .progress {
 
     main .card {
         width: calc((100% / 2) - 15px + 15px / 2);
+    }
+
+    footer .col-right {
+        gap: 10px;
     }
 
     footer .col-left .save-song {
