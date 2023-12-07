@@ -113,6 +113,16 @@ aside a {
     filter: opacity(.6);
 }
 
+aside a.home {
+    filter: opacity(1);
+}
+
+aside .menu li:has(> a.home) {
+    border-left: 2px solid;
+    border-color: var(--colorAccent);
+    padding-left: calc(20px - 2px);
+}
+
 aside a:hover {
     filter: opacity(1);
 }
@@ -142,6 +152,8 @@ aside .menu li a {
 aside .menu li svg {
     width: 20px;
 }
+
+
 
 aside .playlist {
     margin-block: 25px;
