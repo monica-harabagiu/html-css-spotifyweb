@@ -332,8 +332,32 @@ main .card {
     text-align: center;
 }
 
+main .card:hover {
+    cursor: pointer;
+}
+
 main .card img {
     max-width: 200px;
+}
+
+main .card figure {
+    background-color: black;
+    position: relative;
+}
+
+main .card figure:hover::after {
+    content: '\f144';
+    font-family: 'Font Awesome 6 Free';
+    font-size: 4rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+main .card:hover figure img {
+    filter: opacity(.3);
 }
 
 main .card h4 {
@@ -341,6 +365,7 @@ main .card h4 {
     margin-bottom: 7px;
 }
 
+main #populars figure,
 main #populars img {
     border-radius: 50%;
 }
@@ -388,6 +413,12 @@ footer .col-left .song-name span:last-child {
     filter: opacity(.5);
 }
 
+footer .col-left .song-name span:last-child:hover {
+    filter: opacity(1);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 footer .col-left .song-playing figure {
     width: 40px;
 }
@@ -399,6 +430,20 @@ footer .col-left .save-song {
 footer .col-left .save-song i {
     font-size: 15px;
     filter: opacity(.5);
+}
+
+footer .col-left .save-song i:hover {
+    filter: opacity(1);
+    cursor: pointer;
+}
+
+footer .col-mid .fa-circle-play {
+    scale: 1.6;
+}
+
+footer .col-mid .fa-circle-play:hover {
+    scale: 1.7;
+    cursor: pointer;
 }
 
 footer .col-mid {
@@ -422,17 +467,42 @@ footer .col-mid .song-bar span {
 }
 
 footer .col-mid .song-bar .all-bar {
-    height: 3px;
     width: 30vw;
+}
+
+footer .col-mid .song-bar .progress {
+    width: 20%;
+}
+
+footer .all-bar {
+    height: 3px;
     background-color: rgba(255, 255, 255, 0.2);
     border-radius: 20px;
 }
 
-footer .col-mid .song-bar .progress {
+footer .progress {
     height: 3px;
-    width: 20%;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
+    position: relative;
+}
+
+footer .all-bar:hover {
+    cursor: pointer;
+}
+
+footer .all-bar:hover .progress {
+    background-color: var(--colorAccent);
+}
+
+footer .all-bar:hover .progress::after {
+    content: "\f111";
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    position: absolute;
+    font-size: 12px;
+    right: 0;
+    top: -5px;
 }
 
 footer .col-right {
@@ -447,17 +517,11 @@ footer .col-right i {
 }
 
 footer .col-right .all-bar {
-    height: 3px;
     width: 80px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 20px;
 }
 
 footer .col-right .progress {
-    height: 3px;
     width: 20px;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 20px;
 }
 
 
